@@ -6,7 +6,7 @@ const Signup = function(){
     let [formData, setFormData] = useState({email: "",  name: "", phoneNumber: "", password: ""});
     let [register, setRegister] = useState({success: null, message: null});
     let navigate = useNavigate()
-    let backend = "http://localhost:8080/api/v1";
+    let backend = "https://cstech-infosolutions-1.onrender.com//api/v1";
 
     if(register.message == "User all ready exsist"){  // If user registered then redirect to login page
         setTimeout(()=>{

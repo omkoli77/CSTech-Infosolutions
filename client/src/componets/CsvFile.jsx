@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const CsvFile = ({fetchDashboardData, setInitailData, setRegister, removeClientMsg}) => {
     const [selectedFile, setSelectedFile] = useState(null);
-    let backend = "http://localhost:8080/api/v1/task";
+    let backend = "https://cstech-infosolutions-1.onrender.com/api/v1/task";
 
     useEffect(() => {
     setSelectedFile(null);  // Reset previous CSV state when component mounts

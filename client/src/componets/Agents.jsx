@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export const Agents = ({initialData, setInitailData, fetchDashboardData, setRegister, removeClientMsg}) => {
     let [formData, setFormData] = useState({name: "", email: "", phoneNumber: "", password: ""});
-    let backend = "http://localhost:8080/api/v1/agents";
+    let backend = "https://cstech-infosolutions-1.onrender.com/api/v1/agents";
     console.log("Agents component rendered")
 
     function handleChnage(e){  // handle form change
