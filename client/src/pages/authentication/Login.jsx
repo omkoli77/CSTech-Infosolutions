@@ -72,7 +72,7 @@ const Login = function(){
                 </div>
 
                 <div className="px-10 py-3 pb-2">
-                    <button className="bg-blue-600 font-semibold w-full p-3 rounded-lg">Create Account</button>
+                    <button className="bg-blue-600 font-semibold w-full p-3 rounded-lg">Login</button>
                 </div>
 
                  <div className="px-10 mb-8">
