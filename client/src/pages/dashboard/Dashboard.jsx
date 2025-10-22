@@ -13,9 +13,9 @@ import { CiViewList } from "react-icons/ci";
 export const Dashboard = ()=>{
     const [initialData, setInitailData] = useState({totalAgent: 0, listUploaded: 0, totalTask: 0, totalTaskList: []});
     let [register, setRegister] = useState({success: null, message: null});
+    let navigate = useNavigate()
 
     let backend = "http://localhost:8080/api/v1";
-    let navigate = useNavigate()
     console.log("dashboard componet rendered",initialData)
     
     function removeClientMsg(){  // remove client side msg

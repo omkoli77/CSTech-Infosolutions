@@ -5,16 +5,15 @@ export const CsvFile = ({fetchDashboardData, setInitailData, setRegister, remove
     const [selectedFile, setSelectedFile] = useState(null);
     let backend = "http://localhost:8080/api/v1/task";
 
+    useEffect(() => {
+    setSelectedFile(null);  // Reset previous CSV state when component mounts
+    }, []);
     
     const handleFileChange = (event) => {  // handle form change
         if (event.target.files && event.target.files[0]) {
           setSelectedFile(event.target.files[0]);
         }
     };
-    useEffect(() => {
-    // Reset previous CSV state when component mounts
-    setSelectedFile(null);
-    }, []);
 
     const handleSubmit = (e)=>{  // handle form submit
         e.preventDefault()

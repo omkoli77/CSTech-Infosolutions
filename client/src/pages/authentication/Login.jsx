@@ -10,7 +10,7 @@ const Login = function(){
 
     function registerUser(){  // Send request to backend
         axios.post(`${backend}/users/login`, {user: formData},{
-            withCredentials: true // Include this line
+            withCredentials: true 
         })  
         .then((res)=> {
             setRegister({success: res.data.success, message: res.data.message});
@@ -19,7 +19,7 @@ const Login = function(){
         .catch((error)=> (setRegister({success: error.response.data.success, message: error.response.data.message}), removeClientMsg()))
     };
 
-    function handleChnage(event){  // handle from input chnage
+    function handleChnage(event){  // handle form input chnage
         let id = event.target.id;
         setFormData((prevObj)=>{
             return {...prevObj, [id]: event.target.value}
