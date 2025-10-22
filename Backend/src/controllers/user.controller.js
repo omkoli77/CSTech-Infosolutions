@@ -19,8 +19,8 @@ async function generateAccessAndRefreshToken(userId) {
 
 let cookieOptions = {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
     path: "/",
 }
 
