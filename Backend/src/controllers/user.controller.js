@@ -21,6 +21,7 @@ let cookieOptions = {
     httpOnly: true,
     secure: false,
     sameSite: "lax",
+    path: "/",
 }
 
 
