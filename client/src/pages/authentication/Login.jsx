@@ -7,7 +7,8 @@ const Login = function(){
     let [register, setRegister] = useState({success: null, message: null});
     let navigate = useNavigate();
     let backend = "https://cstech-infosolutions-1.onrender.com/api/v1";
-
+    axios.defaults.withCredentials = true;
+    
     function registerUser(){  // Send request to backend
         axios.post(`${backend}/users/login`, {user: formData},{
             withCredentials: true 
