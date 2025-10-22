@@ -15,7 +15,7 @@ async function generateAccessAndRefreshToken(userId) {
     catch (error) {
         throw new ApiError(500, "generating access and refresh token fail while registering user")
     }
-}
+};
 
 let cookieOptions = {
     httpOnly: true,
