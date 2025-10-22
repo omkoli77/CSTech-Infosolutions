@@ -6,7 +6,7 @@ import { ApiResponse } from "./src/utils/ApiResponse.js";
 const app = express();
 app.set("port", (process.env.PORT || 8080));
 
-const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "http://localhost:5173", "https://cstech-infosolutions-1.onrender.com", "https://cs-tech-infosolutions-eta.vercel.app/"];
+const allowedOrigins = ["http://localhost:3000", "http://localhost:3001", "http://localhost:5173", "https://cstech-infosolutions-1.onrender.com", "https://cs-tech-infosolutions-eta.vercel.app"];
 app.use(cors({
     origin: allowedOrigins,
     credentials: true
