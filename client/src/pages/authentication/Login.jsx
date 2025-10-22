@@ -1,18 +1,16 @@
 import { useState } from "react";
 import {Link, useNavigate} from "react-router-dom"
 import axios from "axios";
+axios.defaults.withCredentials = true;
 
 const Login = function(){
     let [formData, setFormData] = useState({emailOrPhoneNumber: "", password: ""});
     let [register, setRegister] = useState({success: null, message: null});
     let navigate = useNavigate();
     let backend = "https://cstech-infosolutions-1.onrender.com/api/v1";
-    axios.defaults.withCredentials = true;
-    
+
     function registerUser(){  // Send request to backend
-        axios.post(`${backend}/users/login`, {user: formData},{
-            withCredentials: true 
-        })  
+        axios.post(`${backend}/users/login`, {user: formData})  
         .then((res)=> {
             setRegister({success: res.data.success, message: res.data.message});
             removeClientMsg()
