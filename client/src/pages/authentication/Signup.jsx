@@ -6,7 +6,7 @@ const Signup = function(){
     let [formData, setFormData] = useState({email: "",  name: "", phoneNumber: "", password: ""});
     let [register, setRegister] = useState({success: null, message: null});
     let navigate = useNavigate()
-    let backend = "https://cstech-infosolutions-1.onrender.com//api/v1";
+    let backend = "https://cstech-infosolutions-1.onrender.com/api/v1";
 
     if(register.message == "User all ready exsist"){  // If user registered then redirect to login page
         setTimeout(()=>{
@@ -39,7 +39,6 @@ const Signup = function(){
     function handleSubmit(e){  // Handle form submit
         e.preventDefault()
         registerUser()
-        console.log("form sumbited")
     }
 
     const divStyle = {

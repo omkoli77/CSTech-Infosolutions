@@ -16,7 +16,6 @@ export const Dashboard = ()=>{
     let navigate = useNavigate()
 
     let backend = "https://cstech-infosolutions-1.onrender.com/api/v1";
-    console.log("dashboard componet rendered",initialData)
     
     function removeClientMsg(){  // remove client side msg
         setTimeout(()=>{

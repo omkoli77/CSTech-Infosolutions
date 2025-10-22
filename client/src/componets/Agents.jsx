@@ -4,7 +4,6 @@ import { useState } from "react"
 export const Agents = ({initialData, setInitailData, fetchDashboardData, setRegister, removeClientMsg}) => {
     let [formData, setFormData] = useState({name: "", email: "", phoneNumber: "", password: ""});
     let backend = "https://cstech-infosolutions-1.onrender.com/api/v1/agents";
-    console.log("Agents component rendered")
 
     function handleChnage(e){  // handle form change
         let {name, value} = e.target;
@@ -17,7 +16,6 @@ export const Agents = ({initialData, setInitailData, fetchDashboardData, setRegi
         console.log(formData);
         axios.post(`${backend}/register`, {user: formData}, {withCredentials: true})
         .then((res)=> {
-            console.log("agent registere successfull", res)
             setRegister({success: res.data.success, message: res.data.message})
             removeClientMsg()
             setInitailData((prevObj)=>{
@@ -25,7 +23,6 @@ export const Agents = ({initialData, setInitailData, fetchDashboardData, setRegi
             })
         })
         .catch((error)=> {
-            console.log("agent not registered", error)
             setRegister({success: error.response.data.success, message: error.response.data.message})
             removeClientMsg()
         })

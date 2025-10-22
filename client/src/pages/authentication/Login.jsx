@@ -28,7 +28,6 @@ const Login = function(){
     function handleSubmit(e){  // Handle form submit
         e.preventDefault()
         registerUser()
-        console.log("form sumbited", formData);
     }
 
     if(register.message == "User not registered"){  // If user not registered then redirect to signup page

@@ -27,7 +27,6 @@ export const CsvFile = ({fetchDashboardData, setInitailData, setRegister, remove
           withCredentials: true
         })
         .then((res)=> {
-            console.log("file uploaded successfully", res.data.data)
             setSelectedFile(null)
             document.querySelector('input[type="file"]').value = "";
             fetchDashboardData()
@@ -35,7 +34,6 @@ export const CsvFile = ({fetchDashboardData, setInitailData, setRegister, remove
             removeClientMsg()
         })
         .catch((error)=> {
-            console.log("file not uploaded", error)
             setRegister({success: error.response.data.success, message: error.response.data.message})
             removeClientMsg()
         })
