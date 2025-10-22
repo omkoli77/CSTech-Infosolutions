@@ -15,7 +15,7 @@ export const Dashboard = ()=>{
     let [register, setRegister] = useState({success: null, message: null});
     let navigate = useNavigate()
 
-    let backend = "http://localhost:8080/api/v1";
+    let backend = "https://cstech-infosolutions-1.onrender.com/api/v1";
     console.log("dashboard componet rendered",initialData)
     
     function removeClientMsg(){  // remove client side msg
